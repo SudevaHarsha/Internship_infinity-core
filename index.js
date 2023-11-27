@@ -210,3 +210,21 @@ function autoSlide1() {
 
 autoSlide1();
  */
+
+var scrollTrigger = document.getElementById('scroll-trigger');
+
+    // Function to handle scroll event
+    function handleScroll() {
+      var scrollPosition = window.scrollY || window.pageYOffset;
+
+      // Adjust the value 300 as needed for the scroll trigger point
+      if (scrollPosition > 300) {
+        scrollTrigger.style.visibility = 'visible';
+      } else {
+        scrollTrigger.style.visibility = 'hidden';
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
